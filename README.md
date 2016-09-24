@@ -29,3 +29,7 @@ There are many ways to contribute to dataloaderGUI.
 ## Questions, Concerns, and Feature Request
 
 * Please create an **[issue](https://github.com/bulbajackel/dataloaderGUI/issues)** or send me an email if you have feedback to give 
+
+### created by Charles Barnes
+
+
