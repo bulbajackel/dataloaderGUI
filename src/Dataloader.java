@@ -101,13 +101,17 @@ public class Dataloader extends javax.swing.JFrame {
         jobOrderExist = new javax.swing.JTextField();
         clientCompanyExist = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
+        candidateCheck = new javax.swing.JCheckBox();
+        contactCheck = new javax.swing.JCheckBox();
+        companyCheck = new javax.swing.JCheckBox();
+        jobCheck = new javax.swing.JCheckBox();
+        leadCheck = new javax.swing.JCheckBox();
+        opportunityCheck = new javax.swing.JCheckBox();
+        placementCheck = new javax.swing.JCheckBox();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         fileLocation = new javax.swing.JTextField();
         openPicker = new javax.swing.JButton();
         candidateRadio = new javax.swing.JRadioButton();
@@ -143,8 +147,9 @@ public class Dataloader extends javax.swing.JFrame {
         properties.setTitle("Dataloader Properties");
         properties.setAlwaysOnTop(true);
         properties.setMaximumSize(new java.awt.Dimension(32188923, 32103));
-        properties.setMinimumSize(new java.awt.Dimension(320, 550));
-        properties.setSize(new java.awt.Dimension(295, 450));
+        properties.setMinimumSize(new java.awt.Dimension(350, 700));
+        properties.setPreferredSize(new java.awt.Dimension(350, 725));
+        properties.setSize(new java.awt.Dimension(350, 725));
 
         cancelProperties1.setText("Cancel");
         cancelProperties1.addActionListener(new java.awt.event.ActionListener() {
@@ -234,24 +239,32 @@ public class Dataloader extends javax.swing.JFrame {
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Exist Fields");
 
-        jCheckBox1.setText("Candidate");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        candidateCheck.setText("Candidate");
+        candidateCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                candidateCheckActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Contact");
+        contactCheck.setText("Contact");
 
-        jCheckBox3.setText("Company");
+        companyCheck.setText("Company");
 
-        jCheckBox4.setText("Job");
+        jobCheck.setText("Job");
 
-        jCheckBox5.setText("Lead");
+        leadCheck.setText("Lead");
 
-        jCheckBox6.setText("Opportunity");
+        opportunityCheck.setText("Opportunity");
 
-        jCheckBox7.setText("Placement");
+        placementCheck.setText("Placement");
+
+        jLabel2.setText("client ID");
+
+        jLabel3.setText("Client Secret");
+
+        jLabel4.setText("username");
+
+        jLabel5.setText("password");
 
         javax.swing.GroupLayout propertiesLayout = new javax.swing.GroupLayout(properties.getContentPane());
         properties.getContentPane().setLayout(propertiesLayout);
@@ -262,13 +275,13 @@ public class Dataloader extends javax.swing.JFrame {
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesLayout.createSequentialGroup()
                         .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(candidateCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(contactCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(companyCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jobCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(leadCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(opportunityCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(placementCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(opportunityExist, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
@@ -278,21 +291,32 @@ public class Dataloader extends javax.swing.JFrame {
                             .addComponent(placementExist, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(clientContactExist, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(candidateExist, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesLayout.createSequentialGroup()
+                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(propertiesLayout.createSequentialGroup()
+                                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(clientID, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(clientSecret, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                            .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(propertiesLayout.createSequentialGroup()
                         .addComponent(authUrl)
-                        .addGap(6, 6, 6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(threads, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10))
                     .addGroup(propertiesLayout.createSequentialGroup()
                         .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(clientSecret, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(username, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(password, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(clientID, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
                                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -315,14 +339,22 @@ public class Dataloader extends javax.swing.JFrame {
             .addGroup(propertiesLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(clientSecret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clientSecret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(17, 17, 17)
+                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dateFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,34 +370,34 @@ public class Dataloader extends javax.swing.JFrame {
                     .addComponent(threads, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(candidateExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox1))
+                    .addComponent(candidateCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clientContactExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox2))
+                    .addComponent(contactCheck))
                 .addGap(1, 1, 1)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clientCompanyExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox3))
+                    .addComponent(companyCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jobOrderExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox4))
+                    .addComponent(jobCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(leadExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox5))
+                    .addComponent(leadCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(opportunityExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox6))
+                    .addComponent(opportunityCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(placementExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox7))
+                    .addComponent(placementCheck))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(resetProperties1)
@@ -425,6 +457,13 @@ public class Dataloader extends javax.swing.JFrame {
 
         displayPane.setColumns(20);
         displayPane.setRows(5);
+        displayPane.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+                displayPaneCaretPositionChanged(evt);
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(displayPane);
 
         generateButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -609,6 +648,7 @@ public class Dataloader extends javax.swing.JFrame {
             generateCommand = "dataloader template " + selectedEntity;
             
             System.out.println(generateCommand);
+            displayPane.append("\r\n "+generateCommand);
             ProcessBuilder builder = new ProcessBuilder(
                     "cmd.exe", "/c", generateCommand);
             builder.redirectErrorStream(true);
@@ -619,6 +659,7 @@ public class Dataloader extends javax.swing.JFrame {
                 line = r.readLine();
                 if (line == null) { break; }
                 System.out.println(line);
+                displayPane.append("\r\n "+line);
             }
         } catch (IOException ex) {
             Logger.getLogger(Dataloader.class.getName()).log(Level.SEVERE, null, ex);
@@ -650,7 +691,7 @@ public class Dataloader extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             String loadCommand;
-            loadCommand = "dataloader load" + fileLocation.getText();
+            loadCommand = "dataloader load " + fileLocation.getText();
             
             System.out.println(loadCommand);
             ProcessBuilder builder = new ProcessBuilder(
@@ -663,6 +704,7 @@ public class Dataloader extends javax.swing.JFrame {
                 line = r.readLine();
                 if (line == null) { break; }
                 System.out.println(line);
+                displayPane.append("\r\n "+line);
             }
         } catch (IOException ex) {
             Logger.getLogger(Dataloader.class.getName()).log(Level.SEVERE, null, ex);
@@ -686,6 +728,7 @@ public class Dataloader extends javax.swing.JFrame {
                 line = r.readLine();
                 if (line == null) { break; }
                 System.out.println(line);
+                displayPane.append("\r\n "+line);
             }
         } catch (IOException ex) {
             Logger.getLogger(Dataloader.class.getName()).log(Level.SEVERE, null, ex);
@@ -812,14 +855,77 @@ public class Dataloader extends javax.swing.JFrame {
             props.setProperty("listDelimiter", delimiter.getText());
             props.setProperty("dateFormat", dateFormat.getText());
             props.setProperty("numThreads", threads.getText());
-            props.setProperty("candidateExistField", candidateExist.getText());
-            props.setProperty("clientContactExistField", clientContactExist.getText());
-            props.setProperty("clientCorporationExistField", clientCompanyExist.getText());
-            props.setProperty("jobOrderExistField", jobOrderExist.getText());
-            props.setProperty("leadExistField", leadExist.getText());
-            props.setProperty("opportunityExistField", opportunityExist.getText());
-            props.setProperty("placementExistField", placementExist.getText());
-
+            
+             if (candidateCheck.isSelected())
+            {
+                props.setProperty("candidateExistField", candidateExist.getText());
+            }
+            else
+            {
+               props.remove("candidateExistField");
+            }
+             
+             
+              if (contactCheck.isSelected())
+            {
+                props.setProperty("clientContactExistField", clientContactExist.getText());
+            }
+            else
+            {
+                props.remove("clientContactExistField");
+            }
+              
+              
+              if (companyCheck.isSelected())
+            {
+                props.setProperty("clientCorporationExistField", clientCompanyExist.getText());
+            }
+            else
+            {
+                props.remove("clientCorporationExistField");
+            }
+              
+              
+              if (jobCheck.isSelected())
+            {
+                props.setProperty("jobOrderExistField", jobOrderExist.getText());
+            }
+            else
+            {
+                props.remove("jobOrderExistField");
+            }
+              
+              
+              if (leadCheck.isSelected())
+            {
+                props.setProperty("leadExistField", leadExist.getText());
+            }
+            else
+            {
+                props.remove("leadExistField");
+            }
+              
+              
+              if (opportunityCheck.isSelected())
+            {
+                props.setProperty("opportunityExistField", opportunityExist.getText());
+            }
+            else
+            {
+                props.remove("opportunityExistField");
+            }
+              
+              
+              if (placementCheck.isSelected())
+            {
+                props.setProperty("placementExistField", placementExist.getText());
+            }
+            else
+            {
+                props.remove("placementExistField");
+            }
+            
+            
             if (authUrl.isSelected())
             {
                 props.setProperty("authorizeUrl", "https://auth9.bullhornstaffing.com/oauth/authorize");
@@ -854,9 +960,13 @@ public class Dataloader extends javax.swing.JFrame {
         properties.setVisible(false);
     }//GEN-LAST:event_cancelProperties1ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void candidateCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_candidateCheckActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_candidateCheckActionPerformed
+
+    private void displayPaneCaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_displayPaneCaretPositionChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_displayPaneCaretPositionChanged
 
     /**
      * @param args the command line arguments
@@ -903,6 +1013,7 @@ public class Dataloader extends javax.swing.JFrame {
     private javax.swing.JButton applyProperties1;
     private javax.swing.JCheckBox authUrl;
     private javax.swing.JButton cancelProperties1;
+    private javax.swing.JCheckBox candidateCheck;
     private javax.swing.JTextField candidateExist;
     private javax.swing.JRadioButton candidateRadio;
     private javax.swing.JTextField clientCompanyExist;
@@ -911,6 +1022,8 @@ public class Dataloader extends javax.swing.JFrame {
     private javax.swing.JRadioButton clientCorporationRadio;
     private javax.swing.JTextField clientID;
     private javax.swing.JTextField clientSecret;
+    private javax.swing.JCheckBox companyCheck;
+    private javax.swing.JCheckBox contactCheck;
     private javax.swing.JTextField dateFormat;
     private javax.swing.JButton deleteButton;
     private javax.swing.JTextField delimiter;
@@ -918,30 +1031,31 @@ public class Dataloader extends javax.swing.JFrame {
     private javax.swing.JFileChooser fileChooser;
     private javax.swing.JTextField fileLocation;
     private javax.swing.JButton generateButton;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox jobCheck;
     private javax.swing.JTextField jobOrderExist;
+    private javax.swing.JCheckBox leadCheck;
     private javax.swing.JTextField leadExist;
     private javax.swing.JRadioButton leadRadio;
     private javax.swing.JButton loadButton;
     private javax.swing.JButton openPicker;
+    private javax.swing.JCheckBox opportunityCheck;
     private javax.swing.JTextField opportunityExist;
     private javax.swing.JRadioButton opportunityRadio;
     private javax.swing.JTextField password;
+    private javax.swing.JCheckBox placementCheck;
     private javax.swing.JTextField placementExist;
     private javax.swing.JRadioButton placementRadio;
     private javax.swing.JDialog properties;
