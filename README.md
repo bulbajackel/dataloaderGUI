@@ -1,7 +1,7 @@
 # DataloaderGUI
 
 
-DataloaderGUI is a GUI application that interfaces with the **[Bullhorn Dataloader](https://github.com/bullhorn/dataloader/)**.  Currently it is just an external application that is functioning as a proof of concept. 
+DataloaderGUI is a GUI application that interfaces with the **[Bullhorn Dataloader](https://github.com/bullhorn/dataloader/)**.  Currently it is just an external application that is functioning as a proof of concept of a potential addition to the main dataloader project.  This is intended to gather a lot of feedback as to what the GUI should/shouldn't do.
 
 ## Releases
 
