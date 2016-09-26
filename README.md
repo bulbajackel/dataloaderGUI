@@ -18,7 +18,7 @@ There are many ways to contribute to dataloaderGUI.
 
 1. Dowload the **[latest release](https://github.com/bulbajackel/dataloaderGUI/releases/latest)** of dataloaderGUI
 2. Extract the contents into your dataloader folder.
-3. Doubleclick dataloader.jar to run the program.
+3. Doubleclick dataloaderGUI.jar to run the program.
 4. Click Edit > Properties
 5. Adjust the information as necessary
 6. Press Apply.
