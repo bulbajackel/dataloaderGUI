@@ -112,6 +112,7 @@ public class Dataloader extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         fileLocation = new javax.swing.JTextField();
         openPicker = new javax.swing.JButton();
         candidateRadio = new javax.swing.JRadioButton();
@@ -147,7 +148,7 @@ public class Dataloader extends javax.swing.JFrame {
         properties.setTitle("Dataloader Properties");
         properties.setAlwaysOnTop(true);
         properties.setMaximumSize(new java.awt.Dimension(32188923, 32103));
-        properties.setMinimumSize(new java.awt.Dimension(350, 700));
+        properties.setMinimumSize(new java.awt.Dimension(390, 700));
         properties.setPreferredSize(new java.awt.Dimension(350, 725));
         properties.setSize(new java.awt.Dimension(350, 725));
 
@@ -247,6 +248,11 @@ public class Dataloader extends javax.swing.JFrame {
         });
 
         contactCheck.setText("Contact");
+        contactCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactCheckActionPerformed(evt);
+            }
+        });
 
         companyCheck.setText("Company");
 
@@ -266,80 +272,88 @@ public class Dataloader extends javax.swing.JFrame {
 
         jLabel5.setText("password");
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("The field(s) that will be used whether to update a record or not if checked");
+
         javax.swing.GroupLayout propertiesLayout = new javax.swing.GroupLayout(properties.getContentPane());
         properties.getContentPane().setLayout(propertiesLayout);
         propertiesLayout.setHorizontalGroup(
             propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(propertiesLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesLayout.createSequentialGroup()
-                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(candidateCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(contactCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(companyCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jobCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(leadCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opportunityCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(placementCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(opportunityExist, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                            .addComponent(leadExist)
-                            .addComponent(jobOrderExist)
-                            .addComponent(clientCompanyExist)
-                            .addComponent(placementExist, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(clientContactExist, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(candidateExist, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, propertiesLayout.createSequentialGroup()
-                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(propertiesLayout.createSequentialGroup()
                                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(clientID, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(clientSecret, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                            .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addComponent(candidateCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(contactCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(companyCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jobCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(leadCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(opportunityCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(placementCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(opportunityExist, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(leadExist)
+                                    .addComponent(jobOrderExist)
+                                    .addComponent(clientCompanyExist)
+                                    .addComponent(placementExist, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(clientContactExist, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(candidateExist, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(propertiesLayout.createSequentialGroup()
+                                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(propertiesLayout.createSequentialGroup()
+                                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel5))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(clientID, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(clientSecret, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                    .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
+                                .addComponent(authUrl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(threads, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
+                                .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dateFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(propertiesLayout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(delimiter, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 98, Short.MAX_VALUE))))
                     .addGroup(propertiesLayout.createSequentialGroup()
-                        .addComponent(authUrl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(threads, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97)
+                        .addComponent(resetProperties1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10))
-                    .addGroup(propertiesLayout.createSequentialGroup()
-                        .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(dateFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(propertiesLayout.createSequentialGroup()
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(delimiter, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, propertiesLayout.createSequentialGroup()
-                                    .addComponent(resetProperties1)
-                                    .addGap(44, 44, 44)
-                                    .addComponent(cancelProperties1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(applyProperties1))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(cancelProperties1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(applyProperties1)))
                 .addContainerGap())
         );
         propertiesLayout.setVerticalGroup(
             propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(propertiesLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel7)
-                .addGap(19, 19, 19)
+                .addGap(18, 18, 18)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -370,7 +384,9 @@ public class Dataloader extends javax.swing.JFrame {
                     .addComponent(threads, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
                 .addGroup(propertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(candidateExist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(candidateCheck))
@@ -403,7 +419,7 @@ public class Dataloader extends javax.swing.JFrame {
                     .addComponent(resetProperties1)
                     .addComponent(cancelProperties1)
                     .addComponent(applyProperties1))
-                .addContainerGap())
+                .addGap(12, 12, 12))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -458,10 +474,10 @@ public class Dataloader extends javax.swing.JFrame {
         displayPane.setColumns(20);
         displayPane.setRows(5);
         displayPane.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            }
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
                 displayPaneCaretPositionChanged(evt);
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
             }
         });
         jScrollPane1.setViewportView(displayPane);
@@ -542,18 +558,17 @@ public class Dataloader extends javax.swing.JFrame {
                             .addComponent(placementRadio)
                             .addComponent(jLabel1))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(0, 0, Short.MAX_VALUE)
-                            .addComponent(generateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(35, 35, 35)
-                            .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(39, 39, 39)
-                            .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(fileLocation)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(openPicker))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(generateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(loadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(fileLocation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(openPicker)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -751,13 +766,60 @@ public class Dataloader extends javax.swing.JFrame {
             threads.setText(prop.getProperty("numThreads"));
             
             candidateExist.setText(prop.getProperty("candidateExistField"));
-            clientContactExist.setText(prop.getProperty("clientContactExistField"));
-            clientCompanyExist.setText(prop.getProperty("clientCorporationExistField"));
-            jobOrderExist.setText(prop.getProperty("jobOrderExistField"));
-            leadExist.setText(prop.getProperty("leadExistField"));
-            opportunityExist.setText(prop.getProperty("opportunityExistField"));
-            placementExist.setText(prop.getProperty("placementExistField"));
+            if (prop.getProperty("candidateExistField") == null){
+                candidateCheck.setSelected(false);
+            }
+            else{
+                candidateCheck.setSelected(true);
+            }
             
+            clientContactExist.setText(prop.getProperty("clientContactExistField"));
+            if (prop.getProperty("clientContactExistField") == null){
+                contactCheck.setSelected(false);
+            }
+            else{
+                contactCheck.setSelected(true);
+            }
+            
+            clientCompanyExist.setText(prop.getProperty("clientCorporationExistField"));
+            if (prop.getProperty("clientCorporationExistField") == null){
+                companyCheck.setSelected(false);
+            }
+            else{
+                companyCheck.setSelected(true);
+            }
+            
+            jobOrderExist.setText(prop.getProperty("jobOrderExistField"));
+            if (prop.getProperty("jobOrderExistField") == null){
+                jobCheck.setSelected(false);
+            }
+            else{
+                jobCheck.setSelected(true);
+            }
+            
+            leadExist.setText(prop.getProperty("leadExistField"));
+            if (prop.getProperty("leadExistField") == null){
+                leadCheck.setSelected(false);
+            }
+            else{
+                leadCheck.setSelected(true);
+            }
+            
+            opportunityExist.setText(prop.getProperty("opportunityExistField"));
+            if (prop.getProperty("opportunityExistField") == null){
+                opportunityCheck.setSelected(false);
+            }
+            else{
+                opportunityCheck.setSelected(true);
+            }
+            
+            placementExist.setText(prop.getProperty("placementExistField"));
+            if (prop.getProperty("placementExistField") == null){
+                placementCheck.setSelected(false);
+            }
+            else{
+                placementCheck.setSelected(true);
+            }
             
             if ("https://auth9.bullhornstaffing.com/oauth/token".equals(prop.getProperty("tokenUrl")))
             {
@@ -968,6 +1030,10 @@ public class Dataloader extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_displayPaneCaretPositionChanged
 
+    private void contactCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactCheckActionPerformed
+        // TODO add your handling code here:prop.getProperty("clientContactExistField")
+    }//GEN-LAST:event_contactCheckActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1038,6 +1104,7 @@ public class Dataloader extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
